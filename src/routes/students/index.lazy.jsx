@@ -4,14 +4,14 @@ import { useSelector } from "react-redux";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import { FaPlus } from "react-icons/fa"; // Import an icon library, e.g., FontAwesome
-import { getStudents } from "../service/student";
-import StudentItem from "../components/Student/StudentItem";
+import { getStudents } from "../../service/student";
+import StudentItem from "../../components/Student/StudentItem";
 
-export const Route = createLazyFileRoute("/")({
-  component: Index,
+export const Route = createLazyFileRoute("/students/")({
+  component: Students,
 });
 
-function Index() {
+function Students() {
   const navigate = useNavigate();
   const { token, user } = useSelector((state) => state.auth);
 
@@ -76,4 +76,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Students;
