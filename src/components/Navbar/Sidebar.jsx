@@ -1,8 +1,13 @@
-import { Link } from "@tanstack/react-router";
-import { FaList } from "react-icons/fa";
+import { Link, useNavigate } from "@tanstack/react-router";
+import { FaList, FaUserPlus } from "react-icons/fa"; // Icon tambahan untuk "Create Student"
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 const Sidebar = ({ sidebarOpen }) => {
+  const navigate = useNavigate();
+
+  const { user } = useSelector((state) => state.auth); // Mengambil data user dari state
+
   return (
     <aside
       id="sidebar"
@@ -16,6 +21,7 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
         <ul className="nav flex-column sidebar-nav p-0">
           <li className="sidebar-header p-3 small">Admin Elements</li>
+          
           <li className="sidebar-item">
             <Link
               to="/"
@@ -24,14 +30,27 @@ const Sidebar = ({ sidebarOpen }) => {
               <FaList className="me-2" /> Dashboard
             </Link>
           </li>
+          
           <li className="sidebar-item">
             <Link
-              to="/students"
+              to="/cars"
               className="nav-link sidebar-link d-flex align-items-center"
             >
-              <FaList className="me-2" /> StudentsList
+              <FaList className="me-2" /> Car List
             </Link>
           </li>
+
+          {/* Link Create Student hanya muncul jika user dengan role_id = 1 */}
+          {user && user.role_id === 1 && (
+            <li className="sidebar-item">
+              <Link
+                  to="/cars/create"
+                className="nav-link sidebar-link d-flex align-items-center"
+              >
+                <FaUserPlus className="me-2" /> Create Car
+              </Link>
+            </li>
+          )}
         </ul>
       </div>
     </aside>
