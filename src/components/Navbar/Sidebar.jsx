@@ -1,11 +1,9 @@
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { FaList, FaUserPlus } from "react-icons/fa"; // Icon tambahan untuk "Create Student"
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 const Sidebar = ({ sidebarOpen }) => {
-  const navigate = useNavigate();
-
   const { user } = useSelector((state) => state.auth); // Mengambil data user dari state
 
   return (
@@ -61,6 +59,14 @@ const Sidebar = ({ sidebarOpen }) => {
               className="nav-link sidebar-link d-flex align-items-center"
             >
               <FaList className="me-2" /> Model
+            </Link>
+          </li>
+          <li className="sidebar-item">
+            <Link
+              to="/caroptions"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Car Options
             </Link>
           </li>
 
