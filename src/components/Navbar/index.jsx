@@ -70,6 +70,7 @@ const NavigationBar = ({ setSidebarOpen }) => {
                   src={user.profile_picture}
                   fluid
                   style={{
+                    marginRight: "10px",
                     width: "30px",
                     height: "30px",
                     borderRadius: "50%",
