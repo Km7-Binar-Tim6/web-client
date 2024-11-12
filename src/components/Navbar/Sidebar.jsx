@@ -48,6 +48,14 @@ const Sidebar = ({ sidebarOpen }) => {
               <FaList className="me-2" /> Type
             </Link>
           </li>
+          <li className="sidebar-item">
+            <Link
+              to="/model"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Model
+            </Link>
+          </li>
         </ul>
       </div>
     </aside>
