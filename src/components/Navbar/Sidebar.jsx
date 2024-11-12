@@ -21,7 +21,7 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
         <ul className="nav flex-column sidebar-nav p-0">
           <li className="sidebar-header p-3 small">Admin Elements</li>
-          
+
           <li className="sidebar-item">
             <Link
               to="/"
@@ -30,7 +30,7 @@ const Sidebar = ({ sidebarOpen }) => {
               <FaList className="me-2" /> Dashboard
             </Link>
           </li>
-          
+
           <li className="sidebar-item">
             <Link
               to="/cars"
@@ -39,12 +39,36 @@ const Sidebar = ({ sidebarOpen }) => {
               <FaList className="me-2" /> Car List
             </Link>
           </li>
+          <li className="sidebar-item">
+            <Link
+              to="/manufacture"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Manufacture
+            </Link>
+          </li>
+          <li className="sidebar-item">
+            <Link
+              to="/type"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Type
+            </Link>
+          </li>
+          <li className="sidebar-item">
+            <Link
+              to="/model"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Model
+            </Link>
+          </li>
 
           {/* Link Create Student hanya muncul jika user dengan role_id = 1 */}
           {user && user.role_id === 1 && (
             <li className="sidebar-item">
               <Link
-                  to="/cars/create"
+                to="/cars/create"
                 className="nav-link sidebar-link d-flex align-items-center"
               >
                 <FaUserPlus className="me-2" /> Create Car

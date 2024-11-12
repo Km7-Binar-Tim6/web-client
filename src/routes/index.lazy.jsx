@@ -1,11 +1,4 @@
-import { createLazyFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
-import { FaPlus } from "react-icons/fa";
-import { getCars } from "../service/car";
-import CarItem from "../components/Car/CarItem";
+import { createLazyFileRoute } from "@tanstack/react-router";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -13,9 +6,9 @@ export const Route = createLazyFileRoute("/")({
 
 function Index() {
   return (
-    <Row className="mt-4">
-            <h1>Car data is not found!</h1>
-        </Row>
+    <div className="mt-4">
+      <h1>Ini adalah dashboard utama</h1>
+    </div>
   );
 }
 
