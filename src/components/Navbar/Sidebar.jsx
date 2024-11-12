@@ -32,6 +32,22 @@ const Sidebar = ({ sidebarOpen }) => {
               <FaList className="me-2" /> StudentsList
             </Link>
           </li>
+          <li className="sidebar-item">
+            <Link
+              to="/manufacture"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Manufacture
+            </Link>
+          </li>
+          <li className="sidebar-item">
+            <Link
+              to="/type"
+              className="nav-link sidebar-link d-flex align-items-center"
+            >
+              <FaList className="me-2" /> Type
+            </Link>
+          </li>
         </ul>
       </div>
     </aside>
