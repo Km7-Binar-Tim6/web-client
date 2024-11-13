@@ -2,6 +2,9 @@ import { createLazyFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import { FaPlus } from "react-icons/fa";
 import { getCars } from "../../service/car";
 import CarItem from "../../components/Car/CarItem";
 
@@ -52,6 +55,20 @@ function Index() {
         }
 
         return (
+            <>
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                    <h1>Car List</h1>
+                    {user && user.role_id === 1 && (
+                    <Button
+                        variant="primary"
+                        onClick={() => navigate({ to: "/cars/create" })}
+                        className="d-flex align-items-center"
+                    >
+                        <FaPlus className="me-2" />
+                        Create New Car
+                    </Button>
+                    )}
+                </div>
             <Row className="mt-4">
                     {cars.length === 0 ? (
                         <h1>Car data is not found!</h1>
@@ -60,7 +77,8 @@ function Index() {
                             <CarItem car={car} key={car?.id} />
                         ))
                     )}
-            </Row>
+                </Row>
+            </>
         ); 
     
 }
