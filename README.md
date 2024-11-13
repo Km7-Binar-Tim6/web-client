@@ -1,8 +1,26 @@
-# React + Vite
+# Car Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a car listing API developed with Express.js, Prisma ORM, PostgreSQL, Vite, Boostrap.
 
-Currently, two official plugins are available:
+## 👥 Team Members
+- **Rheno Julius Andreas**: Responsible for cars, and car specs.
+- **David Cristian Putra Sutanto**: Responsible for manufacture, model, and type.
+- **M. Zaky Pria Maulana**: Responsible for car options, transmission.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Account Information
+
+### 🔑 Admin Access
+- **Email**: `admin123@gmail.com`
+- **Password**: `admin123`
+
+### 👤 User Access
+- **Email**: `user100@gmail.com`
+- **Password**: `12345678`
+
+
+## Project Links
+- **Link FrontEnd GAE** : https://xenon-alliance-441513-t5.et.r.appspot.com/
+- ⁠**Link Render** : https://fsw-binar.onrender.com
+- **GitHub Code FrontEnd Link** : https://github.com/Km7-Binar-Tim6/web-client
+- **Github Code backend Link** : https://github.com/Rheno27/fsw-binar/tree/main/24001182-km7-rhe-auth-ch5/Backend 
+
